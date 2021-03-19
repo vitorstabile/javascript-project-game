@@ -26,15 +26,19 @@ function gameBegin(){
 
     var qt_balloons = 10;
 
-    create_ballons(qt_ballons);
+    create_ballons(qt_balloons);
 
 }
 
-function create_ballons(qt_ballons){
+function create_ballons(qt_balloons){
 
-    for (var i = 1; i<= qt_ballons; i++){
+    for (var i = 1; i<= qt_balloons; i++){
 
-        
+        var balloon = document.createElement("img"); // with create element, you can create tags in your document HTML
+        balloon.src = 'img/balao_azul_pequeno.png';
+        balloon.style.margin = "10px"; // you can change the style of the balloon, because, he is a tag html now (img)
+
+        document.getElementById('scene').appendChild(balloon); // with append Child, he will add the img tag with the ballons 
 
     }
 
