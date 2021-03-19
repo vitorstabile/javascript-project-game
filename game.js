@@ -17,4 +17,9 @@ function gameBegin(){
     if (game_level == 3){ // 3 - Hard - 30 secs
         time_secs = 30;
     }
+
+    // inserting the time game in the cronometer
+
+    document.getElementById('cronometer').innerHTML = time_secs; // innerHTML insert the element in the idTag
+
 }
