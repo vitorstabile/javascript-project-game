@@ -4,12 +4,17 @@ function gameBegin(){
 
     var game_level = url.replace("?", "");
 
-    alert(game_level);
+    var time_secs = 0;
 
-    // 1 - Easy - 120 secs
+    if (game_level == 1){ // 1 - Easy - 120 secs
+        time_secs = 120;
+    }
 
-    // 2 - Normal - 60 secs
+    if (game_level == 2){ // 2 - Normal - 60 secs
+        time_secs = 60;
+    }
 
-    // 3 - Hard - 30 secs
-
+    if (game_level == 3){ // 3 - Hard - 30 secs
+        time_secs = 30;
+    }
 }
