@@ -26,4 +26,16 @@ function gameBegin(){
 
     var qt_balloons = 10;
 
+    create_ballons(qt_ballons);
+
+}
+
+function create_ballons(qt_ballons){
+
+    for (var i = 1; i<= qt_ballons; i++){
+
+        
+
+    }
+
 }
