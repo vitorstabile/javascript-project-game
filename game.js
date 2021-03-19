@@ -17,7 +17,7 @@ function gameBegin(){
     }
 
     if (game_level == 3){ // 3 - Hard - 30 secs
-        time_secs = 30;
+        time_secs = 5;
     }
 
     // inserting the time game in the cronometer
@@ -58,6 +58,7 @@ function time_count(time_secs){
 }
 
 function game_over(){
+    remove_event_balloons();
     alert('End of the game');
 }
 
@@ -118,4 +119,15 @@ function game_finish(full_balloons){
 
 function stop_game(){
     clearTimeout(timerId);
+}
+
+function remove_event_balloons(){ // bug fix to clean all events with ballons click when you loose
+    var i = 1; // 
+
+    while(document.getElementById('b'+i)){
+
+        document.getElementById('b'+i).onclick = ''; //clean the event on click
+        i++;
+
+    }
 }
