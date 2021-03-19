@@ -81,6 +81,7 @@ function splash(e){
 
     var id_balloon = e.id;
 
+    document.getElementById(id_balloon).setAttribute("onclick", ""); // this is a bug fix - when you can't splash the same balloon twice
     document.getElementById(id_balloon).src = 'img/balao_azul_pequeno_estourado.png';
 
     score(-1);
