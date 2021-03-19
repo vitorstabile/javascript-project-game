@@ -22,4 +22,8 @@ function gameBegin(){
 
     document.getElementById('cronometer').innerHTML = time_secs; // innerHTML insert the element in the idTag
 
+    // balloons quantity
+
+    var qt_balloons = 10;
+
 }
