@@ -37,7 +37,7 @@ function gameBegin(){
 
     document.getElementById('splash_balloons').innerHTML = qt_ballons_splash;
 
-    time_count(time_secs)
+    time_count(time_secs + 1)
 
 }
 
@@ -68,9 +68,14 @@ function create_ballons(qt_balloons){
         var balloon = document.createElement("img"); // with create element, you can create tags in your document HTML
         balloon.src = 'img/balao_azul_pequeno.png';
         balloon.style.margin = "10px"; // you can change the style of the balloon, because, he is a tag html now (img)
+        balloon.onclick = function(){splash(this);}; // Association of the event on click with the splash balloon
 
         document.getElementById('scene').appendChild(balloon); // with append Child, he will add the img tag with the ballons 
 
     }
 
+}
+
+function splash (){
+    alert('click ballon');
 }
