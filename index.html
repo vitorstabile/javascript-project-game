@@ -8,7 +8,12 @@
 		
         <script language='Javascript'>
 
+            function gameinit(){
+                var game_level = document.getElementById('game_level').value;
 
+                alert('Value choose' + game_level);
+
+            }
 
         </script>
 
@@ -20,12 +25,16 @@
 		<div>
             <p>
                 <b>Difficult: </b>
-                <select>
+                <select id="game_level">
                     <option value="1">Easy</option>
                     <option value="2">Normal</option>
                     <option value="3">Hard</option>
                 </select>
             </p>
+
+            <br />
+            <img onclick="gameinit()" src="img/iniciar.png" />
+
         </div>
 
 	</body>
