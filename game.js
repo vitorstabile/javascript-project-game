@@ -104,4 +104,17 @@ function score(action){
 
     document.getElementById('splash_balloons').innerHTML = splash_balloons; // value actualization in id
 
+    game_finish(full_balloons)
+
+}
+
+function game_finish(full_balloons){
+    if(full_balloons == 0){
+        alert('Congratulations, you splashed all the balloons');
+        stop_game();
+    }
+}
+
+function stop_game(){
+    clearTimeout(timerId);
 }
