@@ -81,5 +81,5 @@ function splash(e){
 
     var id_balloon = e.id;
 
-    alert(id_balloon);
+    document.getElementById(id_balloon).src = 'img/balao_azul_pequeno_estourado.png';
 }
