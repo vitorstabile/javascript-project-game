@@ -1,3 +1,5 @@
+var timerId = null; // variavel que armazena a chamada da função timeout
+
 function gameBegin(){
 
     var url = window.location.search;
@@ -35,6 +37,28 @@ function gameBegin(){
 
     document.getElementById('splash_balloons').innerHTML = qt_ballons_splash;
 
+    time_count(time_secs)
+
+}
+
+function time_count(time_secs){
+
+    time_secs = time_secs -1; // decrease time
+
+    if (time_secs == -1){
+        clearTimeout(timerId); // stop the execution of the function setTimeout when the time is negative
+        game_over()
+        return false
+    }
+
+    document.getElementById("cronometer").innerHTML = time_secs;
+
+    timerId = setTimeout("time_count("+time_secs+")", 1000); //jquery function - The function time_count will be called for every 1000 ms
+
+}
+
+function game_over(){
+    alert('End of the game');
 }
 
 function create_ballons(qt_balloons){
