@@ -25,12 +25,15 @@ function gameBegin(){
     // balloons quantity
 
     var qt_balloons = 50;
+    var qt_ballons_splash = 0;
 
     create_ballons(qt_balloons);
 
     // print full balloons
 
     document.getElementById('full_balloons').innerHTML = qt_balloons;
+
+    document.getElementById('splash_balloons').innerHTML = qt_ballons_splash;
 
 }
 
