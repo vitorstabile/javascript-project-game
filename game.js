@@ -24,9 +24,13 @@ function gameBegin(){
 
     // balloons quantity
 
-    var qt_balloons = 10;
+    var qt_balloons = 50;
 
     create_ballons(qt_balloons);
+
+    // print full balloons
+
+    document.getElementById('full_balloons').innerHTML = qt_balloons;
 
 }
 
