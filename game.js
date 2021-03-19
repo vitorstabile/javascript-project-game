@@ -82,4 +82,20 @@ function splash(e){
     var id_balloon = e.id;
 
     document.getElementById(id_balloon).src = 'img/balao_azul_pequeno_estourado.png';
+
+    score(-1);
+}
+
+function score(action){
+
+    var full_balloons = document.getElementById('full_balloons').innerHTML;
+
+    var splash_balloons = document.getElementById('splash_balloons').innerHTML;
+
+    alert(full_balloons + ' - ' + splash_balloons);
+
+    full_balloons = parseInt(full_balloons);
+    
+    splash_balloons = parseInt(splash_balloons);
+
 }
