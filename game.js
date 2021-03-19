@@ -77,9 +77,9 @@ function create_ballons(qt_balloons){
 
 }
 
-function splash (e){
+function splash(e){
 
+    var id_balloon = e.id;
 
-
-    alert('click ballon');
+    alert(id_balloon);
 }
