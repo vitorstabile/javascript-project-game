@@ -1,5 +1,7 @@
 function gameBegin(){
 
-    alert("Begin Game")
+    var url = window.location;
+
+    alert(url);
 
 }
