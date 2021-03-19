@@ -26,7 +26,7 @@ function gameBegin(){
 
     // balloons quantity
 
-    var qt_balloons = 50;
+    var qt_balloons = 10;
     var qt_ballons_splash = 0;
 
     create_ballons(qt_balloons);
@@ -92,10 +92,16 @@ function score(action){
 
     var splash_balloons = document.getElementById('splash_balloons').innerHTML;
 
-    alert(full_balloons + ' - ' + splash_balloons);
-
     full_balloons = parseInt(full_balloons);
-    
+
     splash_balloons = parseInt(splash_balloons);
+
+    full_balloons = full_balloons + action; // the value of action is -1 see function splash(e)
+
+    splash_balloons = splash_balloons - action; // the value of action is -1 function splash(e)
+
+    document.getElementById('full_balloons').innerHTML = full_balloons; // value actualization in id
+
+    document.getElementById('splash_balloons').innerHTML = splash_balloons; // value actualization in id
 
 }
